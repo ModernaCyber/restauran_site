@@ -6,7 +6,7 @@ interface LayoutProps {
 }
 const Layout:React.FC<LayoutProps> = ({children}) => {
   return (
-    <div className=''>
+    <div className='dark:bg-black '>
         <Navbar/>
         {children}
         <Footer/>

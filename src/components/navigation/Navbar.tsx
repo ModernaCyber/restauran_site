@@ -13,7 +13,7 @@ const MenuItem: React.FC <MenuItemProps> =({menu})=>{
         navigate(`/${menu}`)
     }
     return(
-        <li className='hover:text-[orange] cursor-pointer' onClick={handleNavigate}>{menu}</li>
+        <li className='hover:text-[orange] dark:text-white/75 cursor-pointer' onClick={handleNavigate}>{menu}</li>
     )
 }
 const Navbar: React.FC = () => {

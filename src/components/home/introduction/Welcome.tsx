@@ -3,12 +3,15 @@ import Wrapper from "../../content_wrapper/Wrapper";
 import pizza_slice from "../../../assets/Pizza-slice.jpg";
 import food_table_meet from "../../../assets/food-table-meet.jpg";
 import { motion } from "framer-motion";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
 const Welcome = () => {
+
   return (
     <section className="w-full my-12 h-auto md:h-[600px]">
       <Wrapper>
         <motion.div
-          initial={{ opacity: 0, y: 200 }}
+          initial={{ opacity: 0, y: 75 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.75,
@@ -16,15 +19,7 @@ const Welcome = () => {
           }}
           className="h-auto md:h-[380px] my-auto grid grid-cols-1 md:grid-cols-3"
         >
-          <motion.div
-            initial={{ opacity: 1, y: 0 }}
-            whileHover={{ opacity: 0.75, y: -20 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.25,
-            }}
-            className="w-full h-[380px] md:h-full px-2 flex flex-col overflow-hidden"
-          >
+          <div className="w-full h-[380px] md:h-full px-2 flex flex-col overflow-hidden dark:border dark:border-neutral-200 dark:text-white " >
             <div className=" font-light text-2xl">"Country`s Most Loved"</div>
             <div className=" font-bold text-4xl my-2">Welcome</div>
             <div className="flex w-full flex-col font-thin text-2xl">
@@ -39,33 +34,19 @@ const Welcome = () => {
             </div>
             <button className="flex gap-x-1 px-4 py-2 bg-[orange] h-auto justify-center items-center rounded-2xl text-xl text-white font-semibold mt-auto mb-1">
               <span className="capitalize">More About Us</span>
-              <span className="">-</span>
+              <span className="">
+                <FaLongArrowAltRight />
+              </span>
             </button>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 1, y: 0 }}
-            whileHover={{ opacity: 0.75, y: -25 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.25,
-            }}
-            className="w-full h-[380px] md:h-full px-2 overflow-hidden"
-          >
+          </div>
+          <div className="w-full h-[380px] md:h-full px-2 overflow-hidden">
             <img
               src={pizza_slice}
               alt="intro_img"
               className="w-full h-full object-cover "
             />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 1, y: 0 }}
-            whileHover={{ opacity: 0.75, y: -15 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.25,
-            }}
-            className="overflow-hidden relative z-0 "
-          >
+          </div>
+          <div className="overflow-hidden relative z-0 ">
             <div className="w-full h-full">
               <img
                 src={food_table_meet}
@@ -85,7 +66,7 @@ const Welcome = () => {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
           <div className="w-full h-[380px] md:h-full px-2"></div>
         </motion.div>
       </Wrapper>

@@ -10,7 +10,7 @@ const ToggleMode = () => {
       document.body.classList.toggle("dark");
     };
   return (
-    <button className="ml-2" onClick={toggleTheme}>
+    <button className="ml-2 dark:text-white/75" onClick={toggleTheme}>
     {dark ? <CiLight /> : <CiDark />}
   </button>
   )

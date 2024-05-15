@@ -1,6 +1,8 @@
 import React from "react";
 import Wrapper from "../../content_wrapper/Wrapper";
 import pic34 from "../../../assets/pic34-free-img.jpg";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
 const Offer: React.FC  = () => {
   return (
     <section className="">
@@ -16,7 +18,7 @@ const Offer: React.FC  = () => {
               </div>
             </div>
           </div>
-          <div className="h-[400px] w-full px-6 flex flex-col ">
+          <div className="h-[400px] w-full px-6 flex flex-col dark:text-neutral-200 ">
             <h2 className="text-left font-semibold text-2xl">
               Wednesday Means
             </h2>
@@ -24,14 +26,14 @@ const Offer: React.FC  = () => {
             <h4 className="text-left text-xl capitalize font-semibold mb-4">
               Half price bottle of wine and six tasty lunches for $9
             </h4>
-            <p className="text-left text-sm text-neutral-600 font-light ">
+            <p className="text-left text-sm text-neutral-600 dark:text-neutral-300 font-light ">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
               recusandae, obcaecati dolorum ullam eius labore voluptas
               voluptates maiores. Ab molestias illum ut, aut ex odio eligendi
               quibusdam error incidunt. Explicabo?
             </p>
-            <button className="mt-auto mb-4 px-6 py-2 bg-[orange] mr-auto max-w[300px] rounded-full text-white">
-              Discover Offer -
+            <button className="mt-auto mb-4 px-6 py-2 bg-[orange] flex gap-x-2 items-center mr-auto max-w[300px] rounded-full text-white">
+              Discover Offer <FaLongArrowAltRight/>
             </button>
           </div>
         </div>

@@ -18,13 +18,13 @@ const Testimonial: React.FC = () => {
           <div className="my-6 px-6 flex flex-col w-full h-full">
             <div className="h-2/5 w-full relative">
               <div className="">
-                <img src={quotes} alt="" className=" opacity-25 " />
+                <img src={quotes} alt="" className=" opacity-25 dark:opacity-75 " />
               </div>
               <div className="absolute bottom-0 left- w-32">
-                <img src={parcelli} alt="" className=" w-full h-full " />
+                <img src={parcelli} alt="" className=" w-full h-full dark:opacity-75 " />
               </div>
             </div>
-            <div className="flex flex-col gap-y-4 items-start h-3/5 justify-center w-full">
+            <div className="flex flex-col gap-y-4 items-start h-3/5 justify-center w-full dark:text-neutral-200">
               <img src={pic49} alt="" className="w-20 h-20 rounded-full" />
               <h2 className="text-left font-semibold text-xl">
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
@@ -36,7 +36,7 @@ const Testimonial: React.FC = () => {
             </div>
           </div>
           <div className="my-auto px-6 flex-flex-col gap-y-1">
-            <div className="flex flex-col gap-y-4 items-start h-auto my-2 justify-center w-full">
+            <div className="flex flex-col gap-y-4 items-start h-auto my-2 justify-center w-full dark:text-neutral-200">
               <img src={pic50} alt="" className="w-20 h-20 rounded-full" />
               <h2 className="text-left font-semibold text-xl">
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
@@ -44,7 +44,7 @@ const Testimonial: React.FC = () => {
               </h2>
               <span className="text-left font-light text-lg">- John Doe</span>
             </div>
-            <div className="flex flex-col gap-y-4 items-start h-auto my-2 justify-center w-full">
+            <div className="flex flex-col gap-y-4 items-start h-auto my-2 justify-center w-full dark:text-neutral-200">
               <img src={pic51} alt="" className="w-20 h-20 rounded-full" />
               <h2 className="text-left font-semibold text-xl">
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe

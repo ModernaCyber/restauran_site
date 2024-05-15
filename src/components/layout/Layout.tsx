@@ -1,17 +1,17 @@
-import React, { ReactNode } from 'react'
-import Navbar from '../navigation/Navbar'
-import Footer from '../footer/Footer'
+import React, { ReactNode } from "react";
+import Navbar from "../navigation/Navbar";
+import Footer from "../footer/Footer";
 interface LayoutProps {
-    children: ReactNode
+  children: ReactNode;
 }
-const Layout:React.FC<LayoutProps> = ({children}) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className='dark:bg-black '>
-        <Navbar/>
-        {children}
-        <Footer/>
+    <div className="dark:bg-black ">
+      <Navbar />
+      {children}
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

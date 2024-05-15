@@ -10,7 +10,7 @@ const Logo: React.FC = () => {
   
     return (
         <div className='text-[black] dark:text-neutral-200 flex cursor-pointer text-2xl font-bold h-full items-center' onClick={handleHome}>
-           <img src={fresco} alt='logo' className='h-16'/>
+           <img src={fresco} alt='logo' className='h-16 dark:bg-white/50 dark:px-6 rounded-full'/>
         </div>
     );
 };

@@ -7,7 +7,7 @@ import frill from "../../../assets/frill-free-img.png";
 const Hero: React.FC = () => {
   return (
     <section
-      className="w-full h-[600px] "
+      className="w-full h-[640px] bg-no-repeat bg-center "
       style={{
         backgroundImage: `url(${bg})`,
       }}

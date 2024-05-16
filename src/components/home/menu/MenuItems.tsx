@@ -108,7 +108,7 @@ const MenuItem: React.FC<itemProps> = ({ item }) => {
 };
 
 const MenuItems: React.FC = () => {
-  const menuData = [
+  const menuData:  (string | { title: string; text: string; price: number })[] = [
     {
       title: "Spagheti Delle",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",

@@ -5,7 +5,7 @@ import food_table_meet from "../../../assets/food-table-meet.jpg";
 import { motion } from "framer-motion";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-const Welcome = () => {
+const Welcome: React.FC  = () => {
 
   return (
     <section className="w-full my-12 h-auto md:h-[600px]">

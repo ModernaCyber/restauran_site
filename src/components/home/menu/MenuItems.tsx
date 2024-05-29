@@ -35,41 +35,42 @@ interface itemProps {
     price: number;
   };
 }
+type Side = "left" | "bottom" | "top" | "right";
+
 const MenuItem: React.FC<itemProps> = ({ item }) => {
   const [scope, animate] = useAnimate();
 
-  const handleMouseEnter = (e) => {
+  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
     const side = getNearestSide(e);
     animate(scope.current, {
       clipPath: ENTRANCE_KEYFRAMES[side],
     });
   };
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     const side = getNearestSide(e);
     animate(scope.current, {
       clipPath: EXIT_KEYFRAMES[side],
     });
   };
-  const getNearestSide = (e) => {
-    const box = e.target.getBoundingClientRect();
-    e.clientX;
-    e.clientY;
+  const getNearestSide = (e: React.MouseEvent<HTMLDivElement>): Side => {
+    const box = e.currentTarget.getBoundingClientRect();
     const proximityToLeft = {
       proximity: Math.abs(box.left - e.clientX),
-      side: "left",
+      side: "left" as Side,
     };
     const proximityToRight = {
       proximity: Math.abs(box.right - e.clientX),
-      side: "right",
+      side: "right" as Side,
     };
     const proximityToTop = {
       proximity: Math.abs(box.top - e.clientY),
-      side: "top",
+      side: "top" as Side,
     };
     const proximityToBottom = {
       proximity: Math.abs(box.bottom - e.clientY),
-      side: "bottom",
+      side: "bottom" as Side,
     };
+
     const sortedProximity = [
       proximityToLeft,
       proximityToRight,
@@ -108,37 +109,38 @@ const MenuItem: React.FC<itemProps> = ({ item }) => {
 };
 
 const MenuItems: React.FC = () => {
-  const menuData:  (string | { title: string; text: string; price: number })[] = [
-    {
-      title: "Spagheti Delle",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-      price: 40,
-    },
-    menu_item_1,
-    {
-      title: "Ham and Fontina",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-      price: 20,
-    },
-    menu_item_2,
-    {
-      title: "Chicken Italiano",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-      price: 10,
-    },
-    menu_item_3,
-    {
-      title: "Crumbled Sausage",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-      price: 15,
-    },
-    menu_item_4,
-    {
-      title: "Baked Meatballs",
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-      price: 35,
-    },
-  ];
+  const menuData: (string | { title: string; text: string; price: number })[] =
+    [
+      {
+        title: "Spagheti Delle",
+        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+        price: 40,
+      },
+      menu_item_1,
+      {
+        title: "Ham and Fontina",
+        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+        price: 20,
+      },
+      menu_item_2,
+      {
+        title: "Chicken Italiano",
+        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+        price: 10,
+      },
+      menu_item_3,
+      {
+        title: "Crumbled Sausage",
+        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+        price: 15,
+      },
+      menu_item_4,
+      {
+        title: "Baked Meatballs",
+        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+        price: 35,
+      },
+    ];
 
   return (
     <section

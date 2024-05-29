@@ -109,38 +109,67 @@ const MenuItem: React.FC<itemProps> = ({ item }) => {
 };
 
 const MenuItems: React.FC = () => {
-  const menuData: (string | { title: string; text: string; price: number })[] =
-    [
-      {
-        title: "Spagheti Delle",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-        price: 40,
-      },
-      menu_item_1,
-      {
-        title: "Ham and Fontina",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-        price: 20,
-      },
-      menu_item_2,
-      {
-        title: "Chicken Italiano",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-        price: 10,
-      },
-      menu_item_3,
-      {
-        title: "Crumbled Sausage",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-        price: 15,
-      },
-      menu_item_4,
-      {
-        title: "Baked Meatballs",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
-        price: 35,
-      },
-    ];
+  const menuData: {
+    title: string;
+    text: string;
+    price: number;
+    image: string;
+  }[] = [
+    {
+      title: "Spagheti Delle",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+      price: 40,
+      image: "",
+    },
+    {
+      title: "",
+      text: "",
+      price: 0,
+      image: menu_item_1,
+    },
+    {
+      title: "Ham and Fontina",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+      price: 20,
+      image: "",
+    },
+    {
+      title: "",
+      text: "",
+      price: 0,
+      image: menu_item_2,
+    },
+    {
+      title: "Chicken Italiano",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+      price: 10,
+      image: "",
+    },
+    {
+      title: "",
+      text: "",
+      price: 0,
+      image: menu_item_3,
+    },
+    {
+      title: "Crumbled Sausage",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+      price: 15,
+      image: "",
+    },
+    {
+      title: "",
+      text: "",
+      price: 0,
+      image: menu_item_4,
+    },
+    {
+      title: "Baked Meatballs",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam deserunt explicabo debitis laboriosam corrupti illum officia quos ipsam doloremque, adipisci distinctio, ab nostrum consequuntur consequatur velit culpa? Quidem, minus.",
+      price: 35,
+      image: "",
+    },
+  ];
 
   return (
     <section
@@ -155,9 +184,9 @@ const MenuItems: React.FC = () => {
                 className="w-full h-[260px] border border-[orange] cursor-pointer"
                 key={i}
               >
-                {(i + 1) % 2 === 0 ? (
+                {(i + 1) % 2 === 0  ? (
                   <img
-                    src={data}
+                    src={data.image}
                     alt={`menu_img_${i / 2}`}
                     className="w-full h-full object-cover"
                   />

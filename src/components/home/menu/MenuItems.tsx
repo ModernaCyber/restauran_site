@@ -9,11 +9,11 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 import { useAnimate } from "framer-motion";
 
-const NO_CLIP = "polygon(0% 0%, 100% 0, 0 0, 100% 0 )";
-const BOTTOM_RIGHT_CLIP = "polygon(100% 100%, 100% 0, 0 0, 0 100%)";
-const TOP_RIGHT_CLIP = "polygon(100% 100%, 0 0, 0 0, 0 100% )";
-const BOTTOM_LEFT_CLIP = "polygon(100% 100%, 100% 0, 0 0, 100% 0)";
-const TOP_LEFT_CLIP = "polygon(100% 0, 0 100%, 85% 80%, 100% 0 )";
+const NO_CLIP = "polygon(0% 0%, 100% 0,100%  100% , 0 100%  )";
+const BOTTOM_RIGHT_CLIP = "polygon(0 0, 100% 0, 0 0, 0 100%)";
+const TOP_RIGHT_CLIP = "polygon(0 0, 0 100% ,100% 100%, 0 100% )";
+const BOTTOM_LEFT_CLIP = "polygon(100% 100%, 100% 0, 100% 100% , 0 100% )";
+const TOP_LEFT_CLIP = "polygon(0 0,  100% 0, 100% 100%, 100% 0 )";
 
 const ENTRANCE_KEYFRAMES = {
   left: [BOTTOM_RIGHT_CLIP, NO_CLIP],
